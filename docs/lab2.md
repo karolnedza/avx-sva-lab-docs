@@ -24,9 +24,9 @@ Create an empty folder and download and unzip following file:
 or use https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
 ```
 
-Open folder Lab2 with four empty files
+Go to the folder "lab2" and you should see  four empty files
 
-<img src="images/lab2-init.png" width="100">
+<img src="images/lab2-init.png" width="500">
 
 For the VPC CIDR, replace “x” with your pod number. For example, if your pod number is 11. “x” should be replaced with 11, so the complete CIDR will become 10.11.40.0/23. Make sure Aviatrix Transit VPC is checked. The add VPC tool will automatically create all the required public and private subnets, IGW and routing tables.  
   
