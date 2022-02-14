@@ -90,13 +90,22 @@ _Fig. Initial Topology_
 Although we can use Aviatrix Controller UI to deploy network infrastracture. This time we will use Aviatrix Terraform provider. The Aviatrix provider is used to interact with the many resources supported by Aviatrix. 
 
 ### Validate
-Check if you have terraform installed on your laptop ```terrafrom -v```  
+Check if you have terraform installed on your laptop ```terraform -v```  
 
 <img src="images/terraform_version.png" width="500">
   
-You can familiarize yourselves with the different functions in CoPilot and after each lab, we can verify the results in CoPilot.  
+### Download Terraform lab initial files
 
-The Dashboard tab provides a global overview of your Multi-Cloud network, the status, how much traffic is flowing, locations deployed, etc.  
+Create an empty folder and download and unzip following file:
+
+[SVA Terraform Enviroment](https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip)
+
+```
+or use https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
+```
+
+
+
 
 Topology will visualize the connectivity of the Multi-Cloud environment.  In the Topology view, all objects within a VPC/VNET are clustered together.  To open up a cluster, simply double-click.  This will display subnets, instances, Aviatrix Gateways, etc within a VPC/VNET.  Topology will also show you latency between links, and allows you to initiate some troubleshooting commands directly from the map.  
 
