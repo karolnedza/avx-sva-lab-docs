@@ -26,8 +26,8 @@ or use https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
 
 Open folder Lab2 with four empty files
 
-![Lab 2 Terraform File](images/lab2-init.png | width=100)
-  
+<img src="images/lab2-init.png" width="100">
+
 For the VPC CIDR, replace “x” with your pod number. For example, if your pod number is 11. “x” should be replaced with 11, so the complete CIDR will become 10.11.40.0/23. Make sure Aviatrix Transit VPC is checked. The add VPC tool will automatically create all the required public and private subnets, IGW and routing tables.  
   
 By default, it will use the assigned CIDR to add a private and public subnet to each availability zone in AWS. As of version 6.1, we can modify this behavior in the Advanced settings. Click add new again from the Create a VPC window and have a look at these settings. Try creating and deleting some VPC’s and VNET’s.
