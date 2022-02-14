@@ -14,7 +14,7 @@ Navigate and login to the Aviatrix Controller.
 ### Validate
 Open your browser and navigate to:
 
-**URL:** ```https://ctrl.pod[x].aviatrixlab.com```  
+**URL:** ```https://ctrl.pod[x].aviatrixlab.de```  
 **User:** ```admin```  
 **Password:** ```Password123!```
 
@@ -37,7 +37,7 @@ Each spoke VPC / VNET contains a Linux VM to test connectivity.  The purpose of 
 ### Validate
 In order execute the connectivity tests, we need to log on to the test instances we have deployed throughout the lab. We use a web based SSH tool for this. Browse to:  
 
-**URL:** ```https://web.pod[x].aviatrixlab.com```  
+**URL:** ```https://web.pod[x].aviatrixlab.de```  
 **User:** ```admin```  
 **Password:** ```Password123```  
 
@@ -47,10 +47,10 @@ In order execute the connectivity tests, we need to log on to the test instances
 1- Connect into **GCP-SRV1** from the *ALL CONNECTIONS* pane. (Tip: use right-click open in new tab)  
 2- Run the following commands:
 ```
-ping azure-srv1-priv.pod[x].aviatrixlab.com  
-ping aws-srv1-priv.pod[x].aviatrixlab.com  
-ping aws-srv2-priv.pod[x].aviatrixlab.com  
-ping shared-priv.pod[x].aviatrixlab.com
+ping azure-srv1-priv.pod[x].aviatrixlab.de 
+ping aws-srv1-priv.pod[x].aviatrixlab.de 
+ping aws-srv2-priv.pod[x].aviatrixlab.de  
+ping shared-priv.pod[x].aviatrixlab.de
 ```  
 ### Expected Results
 Not all of the ping tests will be successful.  Look at the Diagram in the Lab 1 Overview and you will see that only Azure and GCP are connected so far, but AWS is not connected, therefore the connectivity tests from GCP to AWS will not work.
@@ -97,7 +97,7 @@ Check if you have terraform installed on your laptop ```terraform -v```
 
 ### Download Terraform lab initial files
 
-Create an empty folder and download and unzip following file:
+Download and unzip following file:
 
 [SVA Terraform Enviroment](https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip)
 
