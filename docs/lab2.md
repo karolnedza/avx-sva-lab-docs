@@ -18,7 +18,7 @@ Let's deploy our first VPC using terraform. To do this please download the prepa
 
 Create an empty folder and download and unzip following file:
 ```
-https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
+[SVA Terraform Enviroment] (https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip)
 ```
 
 _Fig. Create Transit VPC_  
