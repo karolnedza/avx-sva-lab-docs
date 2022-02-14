@@ -10,12 +10,17 @@ _Fig. Lab Overview_
 
 ## Lab 2.1 - Deploy the AWS transit VPC
 ### Description
-As the instructor explained in the first lab, we already have a transit VPC/VNET in Azure and GCP. In this lab, we are going to make the preparations to deploy the aviatrix gateways in the AWS environment. In order to do so, we need a VPC. Instead of having to use the CSP’s console to do this, the controller can do this for us.
+As the instructor explained in the first lab, we already have a transit VPC/VNET in Azure and GCP. In this lab, we are going to make the preparations to deploy the aviatrix gateways in the AWS environment. In order to do so, we need a VPC. Instead of having to use the CSP’s console to do this, the Aviatrix Terraform can do this for us.
 ### Validate
 Go to **_Useful Tools -> Create a VPC_**. As you can see, there already are multiple VPC’s here. See if you can identify these VPC’s on the lab diagram.  
   
-Now click the add new button. Add a new VPC with the following settings:  
-![Create VPC](images/create-vpc.png)  
+Let's deploy our first VPC using terraform. To do this please download the prepared Terraform environment first:
+
+Create an empty folder and download and unzip following file:
+```
+https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
+```
+
 _Fig. Create Transit VPC_  
   
 For the VPC CIDR, replace “x” with your pod number. For example, if your pod number is 11. “x” should be replaced with 11, so the complete CIDR will become 10.11.40.0/23. Make sure Aviatrix Transit VPC is checked. The add VPC tool will automatically create all the required public and private subnets, IGW and routing tables.  
