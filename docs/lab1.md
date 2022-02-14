@@ -84,3 +84,27 @@ By clicking the CoPilot link in the Controller, you should be redirected to CoPi
 
 ![Topology1](images/topology1.png)  
 _Fig. Initial Topology_  
+
+## Lab 1.6 - Terraform Initial Setup
+### Description
+Although we can use Aviatrix Controller UI to deploy network infrastracture. This time we will use Aviatrix Terraform provider. The Aviatrix provider is used to interact with the many resources supported by Aviatrix. 
+
+### Validate
+Check if you have terraform installed on your laptop
+
+<img src="images/terraform_version.png" width="500">
+_Fig. Terraform version Link_  
+  
+You can familiarize yourselves with the different functions in CoPilot and after each lab, we can verify the results in CoPilot.  
+
+The Dashboard tab provides a global overview of your Multi-Cloud network, the status, how much traffic is flowing, locations deployed, etc.  
+
+Topology will visualize the connectivity of the Multi-Cloud environment.  In the Topology view, all objects within a VPC/VNET are clustered together.  To open up a cluster, simply double-click.  This will display subnets, instances, Aviatrix Gateways, etc within a VPC/VNET.  Topology will also show you latency between links, and allows you to initiate some troubleshooting commands directly from the map.  
+
+Tip: Double click on the blue bubbles for more detail!
+### Expected Results
+By clicking the CoPilot link in the Controller, you should be redirected to CoPilot and automatically signed in.  You should be able to view Topology and see the current Multi-Cloud Network topology.  Topology should look similar to this:  
+
+![Topology1](images/topology1.png)  
+_Fig. Initial Topology_  
+
