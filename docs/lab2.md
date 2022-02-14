@@ -17,8 +17,11 @@ Go to **_Useful Tools -> Create a VPC_**. As you can see, there already are mult
 Let's deploy our first VPC using terraform. To do this please download the prepared Terraform environment first:
 
 Create an empty folder and download and unzip following file:
+
+[SVA Terraform Enviroment](https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip)
+
 ```
-[SVA Terraform Enviroment] (https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip)
+or  https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
 ```
 
 _Fig. Create Transit VPC_  
