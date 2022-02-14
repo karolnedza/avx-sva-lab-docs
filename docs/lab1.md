@@ -102,7 +102,7 @@ Create an empty folder and download and unzip following file:
 [SVA Terraform Enviroment](https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip)
 
 ```
-or use https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
+or https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
 ```
 
 ### Expected Results
