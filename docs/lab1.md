@@ -93,7 +93,6 @@ Although we can use Aviatrix Controller UI to deploy network infrastracture. Thi
 Check if you have terraform installed on your laptop
 
 <img src="images/terraform_version.png" width="500">
-_Fig. Terraform version Link_  
   
 You can familiarize yourselves with the different functions in CoPilot and after each lab, we can verify the results in CoPilot.  
 
