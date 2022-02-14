@@ -1,4 +1,4 @@
-# 
+#
 
 <h1 id="cover-heading">
   FlightSchool Lab Guide
@@ -6,4 +6,4 @@
 
 
 [Explore](home)
-[GitHub](https://github.com/fkhademi/flightschool-docs)
+[GitHub](https://github.com/karolnedza/avx-sva-lab-docs)
