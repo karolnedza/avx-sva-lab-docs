@@ -107,6 +107,6 @@ or use https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
 
 ### Expected Results
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/folders.png" width="400" height="50">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/folders.png">
 
 
