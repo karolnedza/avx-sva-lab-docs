@@ -105,15 +105,8 @@ Create an empty folder and download and unzip following file:
 or use https://github.com/karolnedza/sva-terraform/archive/refs/heads/master.zip
 ```
 
-
-
-
-Topology will visualize the connectivity of the Multi-Cloud environment.  In the Topology view, all objects within a VPC/VNET are clustered together.  To open up a cluster, simply double-click.  This will display subnets, instances, Aviatrix Gateways, etc within a VPC/VNET.  Topology will also show you latency between links, and allows you to initiate some troubleshooting commands directly from the map.  
-
-Tip: Double click on the blue bubbles for more detail!
 ### Expected Results
-By clicking the CoPilot link in the Controller, you should be redirected to CoPilot and automatically signed in.  You should be able to view Topology and see the current Multi-Cloud Network topology.  Topology should look similar to this:  
 
-![Topology1](images/topology1.png)  
-_Fig. Initial Topology_  
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/folders.png" width="400" height="50">
+
 
