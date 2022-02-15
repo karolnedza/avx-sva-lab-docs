@@ -134,11 +134,11 @@ Now that we have our transit set up, we will deploy the Aviatrix spoke gateways 
 ### Validate
 This is typical brown-field scenario with existing VPC. To create the spoke gateways for the existing VPC’s we need to get VPC-id and Public Subnets CIDRs. 
 
-Go to Useful Tools -> Create a VPC. As you can see, there are our Spoke VPCs here and we see their VPC-ids. Copy both, you will need them.
+Go to Useful Tools -> Create a VPC. As you can see, there are our Spoke VPCs  and we see their VPC-ids. Copy both, you will need them.
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_vpc_id.png" width="700">
 
-To get Public Subnet CIDR, select VPC and click on ```Details```  Copy first public Subnet CIDR for each VPC (aws-spoke1 and aws-spoke2)
+To get Public Subnet CIDR, select VPC and click on ```DETAILS```  Copy first public Subnet CIDR for each VPC (aws-spoke1 and aws-spoke2)
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_subnets.png" width="700">
 
