@@ -113,7 +113,7 @@ This will take a few minutes, have a coffee.
   
 We are not deploying an HA solution in this workshop, but by adding just two linese we can deploy a second gateway and cluster them in an HA pair.  
 
-[Terraform Aviatrix Transit GW](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway)
+[Terraform Aviatrix Transit GW Doc](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway)
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_ha.png" width="700">
 
