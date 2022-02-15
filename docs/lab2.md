@@ -59,18 +59,14 @@ Start ```terraform console``` and run:
 - ```aviatrix_vpc.aws_vpc.public_subnets```  
 - ```aviatrix_vpc.aws_vpc.public_subnets[0].cidr ```
 
-Example:
-
+###### All Public Subnets
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/public_subnets.png" width="700">
-Fig. All Public Subnets
 
-
+###### First Public Subnet
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet.png" width="700">
-Fig. First Public Subnets
 
-
+###### First Public Subnet CIDR - we will need it later!
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet_cidr.png" width="700">
-Fig. First Public Subnet CIDR - we will need it later!
 
 
 #### Bonus task:
