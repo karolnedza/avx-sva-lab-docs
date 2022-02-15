@@ -100,8 +100,13 @@ Aviatri Transit Gateway requirments:
 - Deploy in first available public subnet
 - Active-Mesh enabled
 
-![Topology](<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw.png" width="700">)
-_Fig. Create Aviatrix Transit Gateway_  
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw.png" width="700">
+
+
+Save the file and run ```terraform apply``` Enter ```yes```  Please read then ingore warning "Deprecated Attribute"
+
+
+
 
 This will take a few minutes, have a coffee.  
 
