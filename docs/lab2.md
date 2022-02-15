@@ -106,13 +106,18 @@ Aviatri Transit Gateway requirments:
 
 Save the file and run ```terraform apply``` Enter ```yes```  Please read then ingore warning "Deprecated Attribute"
 
-
-
-
 This will take a few minutes, have a coffee.  
 
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_apply.png" width="700">
+
   
-Once the gateway has been deployed, take a look at step 2 on this setup page. We are not deploying an HA solution in this workshop, but you can see how easy it is to deploy a second gateway and cluster them in an HA pair.  
+We are not deploying an HA solution in this workshop, but by adding just two linese we can deploy a second gateway and cluster them in an HA pair.  
+
+[Terraform Aviatrix Transit GW](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_ha.png" width="700">
+
+
 ### Expected Results
 Our environment now looks like this:  
 ![Toplogy](images/topology3.png)  
