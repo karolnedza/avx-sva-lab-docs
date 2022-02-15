@@ -151,7 +151,7 @@ Go to ```Useful Tools -> VPC Tracker``` and look for ```aws-shared``` to get VPC
 
 Cloud Ops team told you that they used second and third avaialable subnets /28 in VPC ```aws-shared```. Deploy ```Aviatrix Spoke GW``` in one of them
 
-<font size="-4">Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can agree that subnetting is CCNA folks ;)</font>
+<font size="4">Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can agree that subnetting is CCNA folks ;)</font>
 
 ### Expected Results
 Our environment now looks like this:
