@@ -71,13 +71,11 @@ Start ```terraform console``` and run:
 
 #### Bonus task:
 
-By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and public subnet to each availability zone in AWS. As of version 6.1, we can modify this behavior using  advanced options. 
+By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and public subnet to each availability zone in AWS. As of version 6.1, we can modify this behavior using  advanced options. You can add new VPC with customies CIDR and number of subnets.
 
 [Terraform Aviatrix VPC Documentation](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#advanced-options)
 
-
-You can add new VPC with customies CIDR and number of subnets. 
-
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_advanced.png" width="700">
 
 
 ### Expected Results
