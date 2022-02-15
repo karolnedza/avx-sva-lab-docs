@@ -75,7 +75,7 @@ By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and 
 
 [Terraform Aviatrix VPC Documentation](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#advanced-options)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_advanced.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_adv.png" width="700">
 
 
 ### Expected Results
