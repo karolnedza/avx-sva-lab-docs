@@ -20,12 +20,20 @@ Go to **_Useful Tools -> Create a VPC_**. As you can see, there already are mult
   
 Let's deploy our first VPC using terraform. Go to YourFolder/sva-terraform/lab2/
 
-Use your favourite text editor to Open file  ```provisioners.tf``` and configure Aviatrix Terraform provisioner
+Use your favourite text editor to Open file  ```providers.tf``` and configure Aviatrix Terraform provider
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/providers.png" width="700">
 
 
 Save the file and run ```terraform init``` Did it work? 
+
+Terraform configurations must declare which providers they require, so that Terraform can install and use them.
+
+Open file  ```versions.tf``` and configure Aviatrix Terraform provider 
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/versions.png" width="700">
+
+[Terraform Required Providers](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs)
 
 
 For the VPC CIDR, replace “x” with your pod number. For example, if your pod number is 11. “x” should be replaced with 11, so the complete CIDR will become 10.11.40.0/23. Make sure Aviatrix Transit VPC is checked. The add VPC tool will automatically create all the required public and private subnets, IGW and routing tables.  
