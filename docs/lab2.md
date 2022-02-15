@@ -132,9 +132,16 @@ _Fig. Copilot Topology_
 Now that we have our transit set up, we will deploy the Aviatrix spoke gateways in the *AWS spoke VPC’s* that were already prepared.   
 
 ### Validate
-Create the spoke gateways for the existing VPC’s using the settings below by using **_step 4_** (scroll down) on the **_Multi-Cloud Transit -> Setup_** page.  
-![Toplogy](images/create-spoke-gw.png)  
-_Fig. Create Spoke Gateway_  
+This is typical brown-field scenario with existing VPC. To create the spoke gateways for the existing VPC’s we need to get VPC-id and Public Subnets CIDRs. 
+
+Go to Useful Tools -> Create a VPC. As you can see, there are our Spoke VPCs here and we see their VPC-ids. Copy both, you will need them.
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_vpc_id" width="700">
+
+To get Public Subnet CIDR, select VPC and click on ```Details```  Copy first public Subnet CIDR for each VPC (aws-spoke1 and aws-spoke2)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_subnets" width="700">
+
 
 Make sure you do this for all 3 AWS spoke VPC’s:  
 * _shared-aws_
