@@ -144,13 +144,14 @@ To get Public Subnet CIDR, select VPC and click on ```DETAILS```  Copy first pub
 
 
 ```Useful Tools -> Create a VPC``` shows only VPC created by Controller. There is one more VPC created from Cloud Console. 
-Go to Useful Tools -> VPC Tracker and look for ```aws-shared``` to get VPC-Id and VPC Address Space
+
+Go to ```Useful Tools -> VPC Tracker``` and look for ```aws-shared``` to get VPC-Id and VPC Address Space
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/shared_vpc.png" width="700">
 
-Cloud Ops team told you that they used second and third avaialable subnets /28 in VPC aws-shared. Deploy ```Aviatrix Spoke GW``` in one of them
+Cloud Ops team told you that they used second and third avaialable subnets /28 in VPC ```aws-shared```. Deploy ```Aviatrix Spoke GW``` in one of them
 
-Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 (we can agree that subnetting is CCNA folks)
+Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 (we can agree that subnetting is CCNA folks ;) )
 
 ### Expected Results
 Our environment now looks like this:
