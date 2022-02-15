@@ -97,8 +97,9 @@ Use aviatrxi_vpc resource reference whenever it is possible.  If you don't know 
 
 Aviatri Transit Gateway requirments:
 - Name:  aws-transit
-- Deploy in first available public subnet
-- Active-Mesh enabled
+- Subnet: first available public subnet
+- Active-Mesh: enabled
+- Size: t3.small
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw.png" width="700">
 
