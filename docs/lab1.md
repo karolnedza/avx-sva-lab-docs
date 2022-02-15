@@ -92,7 +92,7 @@ Although we can use Aviatrix Controller UI to deploy network infrastracture. Thi
 ### Validate
 Check if you have terraform v1.x installed on your laptop ```terraform -v```  
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_version.png" width="400">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_version.png" width="500">
 
 
 ### Download Terraform lab initial files
