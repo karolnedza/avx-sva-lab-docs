@@ -90,9 +90,9 @@ _Fig. Initial Topology_
 Although we can use Aviatrix Controller UI to deploy network infrastracture. This time we will use Aviatrix Terraform provider. The Aviatrix provider is used to interact with the many resources supported by Aviatrix. 
 
 ### Validate
-Check if you have terraform installed on your laptop ```terraform -v```  
+Check if you have terraform v1.x installed on your laptop ```terraform -v```  
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_version.png" width="400" height="50">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_version.png" width="400">
 
 
 ### Download Terraform lab initial files
