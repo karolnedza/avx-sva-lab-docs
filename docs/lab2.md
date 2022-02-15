@@ -47,10 +47,24 @@ For the VPC CIDR, replace “x” with your pod number. For example, if your pod
 
 [Terraform Aviatrix VPC Documentation](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc)
 
-Save the file and run ```terraform apply``` Enter [Yes] if you agree.
+Save the file and run ```terraform apply``` Enter ```yes```
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_apply_vpc.png" width="650">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_apply_vpc.png" width="700">
 
+Terraform deployed VPC but what actually was deployed and how we can use it?  You can check if by running ```terraform console``` (```terraform.tfstate``` must be in the same folder)
+
+Start ```terraform console``` and run:
+
+- ```aviatrix_vpc.aws_vpc``` (use resource name you configured in main.tf)
+- ```aviatrix_vpc.aws_vpc.public_subnets```  
+- ```aviatrix_vpc.aws_vpc.public_subnets[0].cidr ```
+
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/public_subnets.png" width="700">
+_Fig. All Public Subnets_  
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnets.png" width="700">
+_Fig. First Public Subnets_  
 
 #### Bonus task:
 
