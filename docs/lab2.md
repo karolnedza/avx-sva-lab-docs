@@ -46,7 +46,7 @@ For the VPC CIDR, replace “x” with your pod number. For example, if your pod
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_vpc.png" width="700">
 
 
-## Bonus task:
+#### Bonus task:
 
 By default, it will use the assigned CIDR to add a private and public subnet to each availability zone in AWS. As of version 6.1, we can modify this behavior in the Advanced settings. Click add new again from the Create a VPC window and have a look at these settings. Try creating and deleting some VPC’s and VNET’s.
 
