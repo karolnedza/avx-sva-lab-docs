@@ -69,7 +69,7 @@ Start ```terraform console``` and run:
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet_cidr.png" width="700">
 
 
-#### Bonus task:
+#### Bonus:
 
 By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and public subnet to each availability zone in AWS. As of version 6.1, we can modify this behavior using  advanced options. You can add new VPC with customies CIDR and number of subnets.
 
@@ -88,12 +88,23 @@ Check out the CoPilot Topology View.  Do you see the newly created Transit VPC?
 ## Lab 2.2 - Deploy the Aviatrix transit gateway
 ### Description
 In this exercise we are going to launch the Aviatrix transit gateway in the newly created Transit VPC in AWS. 
-### Validate
-Browse to **_Multi-Cloud Transit -> Setup_** and launch a new transit gateway via step 1 with the settings below.  
 
-The VPC ID will differ from your environment, but we will select the VPC that we just created and named _aws-transit_. For the public subnet, use the one that has _Public-gateway_ in the name and is located in availability zone _a_. You can click on any of the info buttons if you want to understand what the other settings relate to. Click create when you are ready. This will take a few minutes, have a coffee.  
-![Create VPC](images/create-transit-gw.png)  
+### Task
+Deploy AVX Transit Gateway in the VPC that we just created. You are going to use the same ```~/lab2/main.tf``` file to configure Aviatrix Transit GW.
+Use aviatrxi_vpc resource reference whenever it is possible.  If you don't know what values can be refferences use terraform documentation or ```terraform console```
+
+[Terraform Aviatrix VPC Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#attribute-reference)
+
+Aviatri Transit Gateway requirments:
+- Name:  aws-transit
+- Deploy in first available public subnet
+- Active-Mesh enabled
+
+![Topology](<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw.png" width="700">)
 _Fig. Create Aviatrix Transit Gateway_  
+
+This will take a few minutes, have a coffee.  
+
   
 Once the gateway has been deployed, take a look at step 2 on this setup page. We are not deploying an HA solution in this workshop, but you can see how easy it is to deploy a second gateway and cluster them in an HA pair.  
 ### Expected Results
