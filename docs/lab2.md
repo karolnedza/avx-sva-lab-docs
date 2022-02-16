@@ -91,7 +91,7 @@ In this exercise we are going to launch the Aviatrix transit gateway in the newl
 
 ### Task
 Deploy AVX Transit Gateway in the VPC that we just created. You are going to use the same ```~/lab2/main.tf``` file to configure Aviatrix Transit GW.
-Use aviatrxi_vpc resource reference whenever it is possible.  If you don't know what values can be refferences use terraform documentation or ```terraform console```
+Use aviatrxi_vpc resource reference whenever it is possible.  If you don't know what values can be refferenced use terraform documentation or ```terraform console```
 
 [Terraform Aviatrix VPC Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#attribute-reference)
 
@@ -188,10 +188,23 @@ _Fig. Copilot Topology_
 ## Lab 2.4 - Attach Spoke Gateways to Aviatrix Transit GW
 ### Description
 We now have all of our gateways deployed. Next we need to set up connectivity between the spoke gateways and the transit gateway.
-### Validate
-Go to **_step 6a_** on the **_Multi-Cloud Transit -> Setup_** page. Select the spoke gateway and transit gateway as shown below. **Repeat this for all 3 AWS spokes**.  
-![Toplogy](images/attach-spoke.png)  
-_Fig. Attach Spokes_
+
+### Task
+Attach three Spoke Gateways to Transit GW. You are going to use the same ```~/lab2/main.tf``` to configure spoke attachments. 
+Do not delete previous configuration!
+
+[Terraform Aviatrix Spoke-to-Transit gateway attachments](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_transit_attachment)
+
+Do NOT enter GW names but use terraform resource reference. This will ensure that attachement will be created after Spoke and Transit Gateways are ready.
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_attachments.png" width="700">
+
+
+If you don't know what values can be refferenced use terraform documentation
+[Terraform Aviatrix Spoke GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_gateway#argument-reference)
+
+[Terraform Aviatrix Transit GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway#argument-reference)
+
 ### Expected Results
 If you now go to the **_Multi-Cloud Transit -> List_** page, you can see the 3 transit gateways and each of the spoke gateways attached to them in the Spoke List. Validate that the spokes you just attached are showing up here.  
   
