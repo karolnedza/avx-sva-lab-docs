@@ -239,7 +239,7 @@ You need to enable Connected Transit. To do this modify Transit GW configuration
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit.png" width="700">
 
 
-Save the file and run ```terraform apply``` Enter ```yes```  Terraform should modify Transit GW.
+Save the file and run ```terraform apply``` Enter ```yes```  Terraform should modify Transit GW attribute connected_transit
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit_apply.png" width="700">
 
