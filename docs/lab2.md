@@ -156,9 +156,9 @@ Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can agree that subnetting is
 
 We have all details to deploy three spokes in VPCs:
 
-| VPC  | GW Name |  Size |  Region | VPC ID |  Spoke GW Name | Public Subnet CIDR | 
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | 
-| aws-spoke-1   | aws-spoke-1  | t3.small | eu-central-1 | xxxxx | x.x.x.x/28 |
+|          VPC  |       GW Name |          Size |  Region       |     VPC ID    | Public Subnet CIDR | 
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------------ | 
+| aws-spoke-1   | aws-spoke-1   | t3.small      | eu-central-1  |   xxxxx       |   x.x.x.x/28       |
 
 * vpc: aws-spoke-1  gw name: aws-spoke-1 size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
 * vpc: aws-spoke-2  gw name: aws-spoke-2 size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
