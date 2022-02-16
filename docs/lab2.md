@@ -131,7 +131,7 @@ _Fig. Copilot Topology_
 ### Description
 Now that we have our transit set up, we will deploy the Aviatrix spoke gateways in the *AWS spoke VPC’s* that were already prepared.   
 
-### Validate
+### Task
 This is typical brown-field scenario with existing VPC. To create the spoke gateways for the existing VPC’s we need to get VPC-id and Public Subnets CIDRs. 
 
 Go to Useful Tools -> Create a VPC. As you can see, there are our Spoke VPCs  and we see their VPC-ids. Copy both, you will need them.
@@ -149,9 +149,15 @@ Go to ```Useful Tools -> VPC Tracker``` and look for ```aws-shared``` to get VPC
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/shared_vpc.png" width="700">
 
-Cloud Ops team told you that they used second and third avaialable subnets /28 in VPC ```aws-shared```. Deploy ```Aviatrix Spoke GW``` in one of them
+Cloud Ops team told you that you can use only second or third avaialable subnets /28 in VPC  ```aws-shared``` /24 address space. 
+Deploy ```Aviatrix Spoke GW``` in one of them
 
-<font size="4">Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can agree that subnetting is CCNA folks ;)</font>
+Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can agree that subnetting is CCNA folks ;)
+
+We have all details to deploy three spokes in VPCs:
+* vpc: aws-spoke-1  gw name: aws-spoke-1 size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
+* vpc: aws-spoke-2  gw name: aws-spoke-2 size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
+* vpc: aws-shared   gw name: aws-shared   size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
 
 ### Expected Results
 Our environment now looks like this:
