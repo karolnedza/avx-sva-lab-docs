@@ -77,6 +77,12 @@ By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_adv.png" width="700">
 
+Save the file and run ```terraform apply``` Enter ```yes```
+
+Three Spoke GWs should be deployed in a few minutes
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw_apply.png" width="700">
+
 
 ### Expected Results
 Our environment now looks like this:  
@@ -152,7 +158,7 @@ Go to ```Useful Tools -> VPC Tracker``` and look for ```aws-shared``` to get VPC
 Cloud Ops team told you that you can use only second or third avaialable subnets /28 in VPC  ```aws-shared``` /24 address space. 
 Deploy ```Aviatrix Spoke GW``` in one of them
 
-Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can agree that subnetting is CCNA folks ;)
+Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can silently agree that subnetting is CCNA folks ;)
 
 We have all details to deploy three spokes in VPCs:
 
@@ -161,6 +167,15 @@ We have all details to deploy three spokes in VPCs:
 | aws-spoke-1   | aws-spoke-1   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |
 | aws-spoke-2   | aws-spoke-2   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |
 | aws-shared   | aws-shared   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |
+
+
+You are going to use the same ```~/lab2/main.tf``` to configure all Spoke Gateways. Do not delete previous configuration!
+
+[Terraform Aviatrix Spoke GW Doc](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_gateway)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw.png" width="700">
+
+
 
 ### Expected Results
 Our environment now looks like this:
