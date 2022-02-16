@@ -77,12 +77,6 @@ By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_adv.png" width="700">
 
-Save the file and run ```terraform apply``` Enter ```yes```
-
-Three Spoke GWs should be deployed in a few minutes
-
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw_apply.png" width="700">
-
 
 ### Expected Results
 Our environment now looks like this:  
@@ -175,6 +169,11 @@ You are going to use the same ```~/lab2/main.tf``` to configure all Spoke Gatewa
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw.png" width="700">
 
+Save the ```~/lab2/main.tf``` file and run ```terraform apply``` Enter ```yes```
+
+Three Spoke GWs should be deployed in a few minutes
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw_apply.png" width="700">
 
 
 ### Expected Results
