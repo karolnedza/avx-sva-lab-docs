@@ -160,6 +160,11 @@ We have all details to deploy three spokes in VPCs:
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------------ | 
 | aws-spoke-1   | aws-spoke-1   | t3.small      | eu-central-1  |   xxxxx       |   x.x.x.x/28       |
 
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 * vpc: aws-spoke-1  gw name: aws-spoke-1 size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
 * vpc: aws-spoke-2  gw name: aws-spoke-2 size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
 * vpc: aws-shared   gw name: aws-shared   size: t3.small region: eu-central-1 vpc_id: xxx  public_subnet: x.x.x.x/28
