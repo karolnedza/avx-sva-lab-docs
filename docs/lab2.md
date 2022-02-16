@@ -156,11 +156,11 @@ Hint: 10.[podx].44.16/28 or 10.[podx].44.32/28 - we can silently agree that subn
 
 We have all details to deploy three spokes in VPCs:
 
-|          VPC  |       GW Name |          Size |  Region       |    VPC ID     | Public Subnet CIDR | 
-| ------------- | ------------- | ------------- | ------------- | ------------- | ------------------ | 
-| aws-spoke-1   | aws-spoke-1   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |
-| aws-spoke-2   | aws-spoke-2   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |
-| aws-shared   | aws-shared   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |
+|          VPC  |       GW Name |          Size |  Region       |    VPC ID     | Public Subnet CIDR | Active-Mesh |
+| ------------- | ------------- | ------------- | ------------- | ------------- | ------------------ | ----------- |
+| aws-spoke-1   | aws-spoke-1   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |  true    |
+| aws-spoke-2   | aws-spoke-2   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |  true    |
+| aws-shared   | aws-shared   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |   true     |
 
 
 You are going to use the same ```~/lab2/main.tf``` to configure all Spoke Gateways. Do not delete previous configuration!
@@ -234,7 +234,15 @@ Go to **_Multi-Cloud Transit -> List_** and look at the gateway routing tables f
 
 By default, routes are not propagated between spokes attached to the same transit gateway. We have to enable a setting on our transit gateway to allow this to happen.  
 
-Go to **_Multi-Cloud Transit -> Advanced Config_**. Select the _AWS-TRANSIT-GW_ and enable _Connected Transit_.
+You need to enable Connected Transit. To do this modify Transit GW configuration by adding   ```connected_transit = true```
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit.png" width="700">
+
+
+Save the file and run ```terraform apply``` Enter ```yes```  Terraform should modify Transit GW.
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit_apply.png" width="700">
+
 
 * Connect into AWS-SRV1
 * Run the following commands:
