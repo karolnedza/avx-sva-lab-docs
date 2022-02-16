@@ -199,9 +199,9 @@ Do NOT enter GW names but use terraform resource reference. This will ensure tha
 
 If you don't know what values can be refferenced use terraform documentation
 
-[Terraform Aviatrix Spoke GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_gateway#argument-reference)
+[Terraform Aviatrix Spoke GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_gateway#gw_name)
 
-[Terraform Aviatrix Transit GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway#argument-reference)
+[Terraform Aviatrix Transit GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway#gw_name)
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_attachments.png" width="700">
 
