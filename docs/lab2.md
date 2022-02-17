@@ -313,7 +313,7 @@ Now let’s add the On-Premise Datacenter connection.  You are going to use the 
 Enter the following information: 
 |  |  |
 | ------ | ----------- |
-| **vpc_id** | gcp-transit~-~aviatrix-lab-pod-[pod#]|
+| **vpc_id** | gcp-transit~-~aviatrix-lab-pod-[pod#] |
 | **connection_name** | MyOnPrem |
 | **gw_name** | gcp-transit |
 | **connection_type** | bgp |
