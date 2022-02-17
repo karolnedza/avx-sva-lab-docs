@@ -315,7 +315,7 @@ Enter the following information:
 
 |   Attribute   |   Value        |
 | ------------------ | ----------------- |
-|  **vpc_id**    |   gcp-transit~-~aviatrix-lab-pod-[pod#]    |
+|  **vpc_id**    |   gcp-transit ~ - ~ aviatrix-lab-pod-[pod#]    |
 |  **connection_name**  |  MyOnPrem  |
 |  **gw_name**  |  gcp-transit  |
 |  **connection_type**  |  bgp  |
