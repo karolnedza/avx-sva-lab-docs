@@ -309,7 +309,7 @@ Before adding On-Prem to our Multi-Cloud environment, let’s enable ```Route Ap
 
 To enable Route Approval, navigate to **_Multi-Cloud Transit -> Approval -> Select gcp-transit_** and switch the knob from **Disabled** to **Enabled**.  
 
-Now let’s add the On-Premise Datacenter connection.  You are going to use the same ```~/lab2/main.tf``` to configure the connection. Do not delete previous configuration!
+Now let’s add the On-Premise Datacenter connection.  Open ```~/lab2/main.tf``` to configure the connection. Do not delete previous configuration!
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_external_device_conn)
 

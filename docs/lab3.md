@@ -23,7 +23,9 @@ We can use terraform to enable segmentation on AWS Transit GW we created earlier
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_segmentation.png" width="700">
 
 
-Save the file and run ```terraform apply``` Enter ```yes```  Terraform should modify Transit GW attribute enable_segmentation
+Save the file and run ```terraform apply``` Enter ```yes```  
+
+Terraform should modify Transit GW attribute enable_segmentation
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tgw_segmentation_apply.png" width="700">
 
@@ -35,11 +37,17 @@ Now that segmentation is enabled on the transits, we can continue and build out 
 ### Description
 Now we are going to create some security domains, which we can use for segmentation.
 
-### Validate
-Go to **_Multi-Cloud Transit -> Segmentation -> step 2_** , create the following security domains: _Red_, _Blue_, _Shared_ and _Onprem_.  
+### Task
+Create the following security domains: _Red_, _Blue_, _Shared_ and _Onprem_.
 
-![Lab Overview](images/sec-domains.png)  
-_Fig. Create Security Domains_  
+Open ```~/lab2/main.tf``` and Create the following security domains: _Red_, _Blue_, _Shared_ and _Onprem_.
+
+[Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation_domains.png" width="700">
+
+Save the file and run ```terraform apply``` Enter ```yes```  
+
 
 ### Expected Results
 The 4 security domains should now be created.
