@@ -10,11 +10,11 @@ In this lab, we are going to explore some of the security features that Aviatrix
 Until now we have set up a relatively flat any to any network.  Now let's see how we can segment our network by using Aviatrix Multi-Cloud Network Segmentation.
 ### Task
 
-Your Junior collegue deployed two Transit Gateways from UI. Go to **_Multi-Cloud Transit -> Segmentation_**. First we need to enable segmentation for all 3 transit gateways.  
+Your Junior collegue deployed two Transit Gateways from UI and now you need to go to **_Multi-Cloud Transit -> Segmentation_**. and enable segmentation for all 2 transit gateways: Azure and GCP. 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation.png" width="700">
 
-Select the gateway and click enable. **Make sure to do this  all GCP and Azure transit gateways**.
+Select the gateway and click enable. **Make sure to do this only for GCP and Azure transit gateways**.
 
 We can use terraform to enable segmentation on AWS Transit GW we created earlier
 
