@@ -282,11 +282,6 @@ You are going to use the same ```~/lab2/main.tf``` to configure transit peering.
 ```
 ping gcp-srv1-priv.pod[x].aviatrixlab.com
 ping azure-srv1-priv.pod[x].aviatrixlab.com
-```
-> Were you able to ping aws-srv2-priv and shared-priv?
-
-Now let’s add the peering between _AWS_ and _GCP_ (_gcp-transit_) in the same way.
-```
 ping gcp-srv1-priv.pod[x].aviatrixlab.com
 ```
 
