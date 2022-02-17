@@ -311,7 +311,7 @@ Now let’s add the On-Premise Datacenter connection.  You are going to use the 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_external_device_conn)
 
 Enter the following information: 
-|  |  |
+| Attribute | Value |
 | ------ | ----------- |
 | **vpc_id** | gcp-transit~-~aviatrix-lab-pod-[pod#] |
 | **connection_name** | MyOnPrem |
