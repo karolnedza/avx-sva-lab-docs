@@ -52,17 +52,25 @@ Save the file and run ```terraform apply``` Enter ```yes```
 ### Expected Results
 The 4 security domains should now be created.
 
+
 ## Lab 3.3 - Create Connection Policies
 ### Description
 In order to specify allowed Security Domain to Security Domain communication, we need to set up some Connection Policies.
-### Validate
-Go to **_Multi-Cloud Transit -> Segmentation -> step 3_** and modify the _Shared_ security domain so it is connected to _Red_ and _Blue_. Also connect security domain _Onprem_ to _Red_.  
+### Task
+Open ```~/lab2/main.tf``` and modify the _Shared_ security domain so it is connected to _Red_ and _Blue_. Also connect security domain _Onprem_ to _Red_.  
 
-![Lab Overview](images/connection-policies.png)  
-_Fig. Connection Policies_  
+[Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain_connection_policy)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation_policy.png" width="700">
+
+Save the file and run ```terraform apply``` Enter ```yes```  
+
 
 ### Expected Results
 The above connection policies should now be created.
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_policy_apply.png" width="700">
+
 
 ## Lab 3.4 - Add VPC’s/VNET’s/S2C to Security Domains
 ### Description
