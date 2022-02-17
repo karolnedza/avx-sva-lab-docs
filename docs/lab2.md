@@ -304,6 +304,7 @@ At this point, all cloud resources should be connected and able to communicate w
 In order to connect our Multi-Cloud environment to On-Prem, we will use the ```aviatrix_transit_external_device_conn``` terraform resource.  This allows us to create a secure link between Cloud and On-Prem, and to enable dynamic routing (BGP).  
 
 Before adding On-Prem to our Multi-Cloud environment, let’s enable ```Route Approval```  Enabling Route Approval is a best practice as one can control the routes learned from On-Premise before distributing them in the cloud.  
+
 To enable Route Approval, navigate to **_Multi-Cloud Transit -> Approval -> Select gcp-transit_** and switch the knob from **Disabled** to **Enabled**.  
 
 Now let’s add the On-Premise Datacenter connection.  You are going to use the same ```~/lab2/main.tf``` to configure the connection. Do not delete previous configuration!
@@ -311,18 +312,18 @@ Now let’s add the On-Premise Datacenter connection.  You are going to use the 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_external_device_conn)
 
 Enter the following information: 
-| Attribute | Value |
-| ------ | ----------- |
-| **vpc_id** | gcp-transit~-~aviatrix-lab-pod-[pod#] |
-| **connection_name** | MyOnPrem |
-| **gw_name** | gcp-transit |
-| **connection_type** | bgp |
-| **bgp_local_as_num** | 650[pod#] _For Pods 1-9, pad the pod# with an additional 0 (ie. 65004)_ |
-| **bgp_remote_as_num** | 65000 |
-| **remote_gateway_ip** | <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_ |
-| **pre_shared_key** | mapleleafs |
-| **local_tunnel_cidr** | 169.254.[pod#].2/30 |
-| **remote_tunnel_cidr** | 169.254.[pod#].1/30 |
+|   Attribute   |   Value        |
+| ------------------ | ----------------- |
+|  **vpc_id**    |   gcp-transit~-~aviatrix-lab-pod-[pod#]    |
+|  **connection_name**  |  MyOnPrem  |
+|  **gw_name**  |  gcp-transit  |
+|  **connection_type**  |  bgp  |
+|  **bgp_local_as_num**  |  650[pod#] _For Pods 1-9, pad the pod# with an additional 0 (ie. 65004)_  |
+|  **bgp_remote_as_num**  |  65000  |
+|  **remote_gateway_ip**  |  <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_  |
+|  **pre_shared_key**  |  mapleleafs  |
+|  **local_tunnel_cidr**  |  169.254.[pod#].2/30  |
+|  **remote_tunnel_cidr**  |  169.254.[pod#].1/30  |
 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="700">
