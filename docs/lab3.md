@@ -77,8 +77,8 @@ The above connection policies should now be created.
 ## Lab 3.4 - Add VPC’s/VNET’s/S2C to Security Domains
 ### Description
 Now we will add each of the Spokes and On-Prem connection to the security domains.
-### Validate
-Go to **_Multi-Cloud Transit -> Segmentation_** and on the tabs on the top of the page, go to **_Build_**. Create the following associations:
+### Task
+Open ```~/lab2/main.tf``  and create the following associations:
 
 | Transit Gateway Name | Attachment Name | Security Domain Name |
 | ------ | ----------- | ---------- |
@@ -89,8 +89,7 @@ Go to **_Multi-Cloud Transit -> Segmentation_** and on the tabs on the top of th
 | azure-transit   | azure-spoke1 | Blue |
 | gcp-transit   | MyOnPrem | Onprem |
 		
-![Lab Overview](images/sec-domain-attachments.png)  
-_Fig. Security Domain Attachments_  
+
 
 ### Expected Results
 Once you have done this, have a look at the Security Domain overview in CoPilot. You will find it by clicking **_Security_** in the menu. This should help you clearly understand the Security Domains and the Connection Policies.
