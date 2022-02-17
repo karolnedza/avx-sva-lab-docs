@@ -91,7 +91,7 @@ In this exercise we are going to launch the Aviatrix transit gateway in the newl
 
 ### Task
 Deploy AVX Transit Gateway in the VPC that we just created. You are going to use the same ```~/lab2/main.tf``` file to configure Aviatrix Transit GW.
-Use aviatrxi_vpc resource reference whenever it is possible.  If you don't know what values can be refferenced use terraform documentation or ```terraform console```
+Use ```aviatrix_vpc``` resource reference whenever it is possible.  If you don't know what values can be refferenced use terraform documentation or ```terraform console```
 
 [Terraform Aviatrix VPC Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#attribute-reference)
 
@@ -282,7 +282,6 @@ You are going to use the same ```~/lab2/main.tf``` to configure transit peering.
 ```
 ping gcp-srv1-priv.pod[x].aviatrixlab.com
 ping azure-srv1-priv.pod[x].aviatrixlab.com
-ping gcp-srv1-priv.pod[x].aviatrixlab.com
 ```
 
 ### Expected Results
@@ -302,24 +301,33 @@ _Fig. Copilot Topology with Transit Peering_
 ### Description
 At this point, all cloud resources should be connected and able to communicate with one another.  The only part that is missing is the connection to On-Prem.
 ### Validate
-In order to connect our Multi-Cloud environment to On-Prem, we will use the **_Multi-Cloud Transit_** workflow.  This allows us to create a secure link between Cloud and On-Prem, and to enable dynamic routing (BGP).  
+In order to connect our Multi-Cloud environment to On-Prem, we will use the ```aviatrix_transit_external_device_conn``` terraform resource.  This allows us to create a secure link between Cloud and On-Prem, and to enable dynamic routing (BGP).  
 
-Before adding On-Prem to our Multi-Cloud environment, let’s enable Route Approval.  Enabling Route Approval is a best practice as one can control the routes learned from On-Premise before distributing them in the cloud.  
+Before adding On-Prem to our Multi-Cloud environment, let’s enable ```Route Approval```  Enabling Route Approval is a best practice as one can control the routes learned from On-Premise before distributing them in the cloud.  
 To enable Route Approval, navigate to **_Multi-Cloud Transit -> Approval -> Select gcp-transit_** and switch the knob from **Disabled** to **Enabled**.  
 
-Now let’s add the On-Premise Datacenter connection.  Navigate to **_Multi-Cloud Transit -> Setup -> Step 3_**.  Select External Device, select BGP and enter the following information:  
+Now let’s add the On-Premise Datacenter connection.  You are going to use the same ```~/lab2/main.tf``` to configure the connection. Do not delete previous configuration!
+
+[Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_external_device_conn)
+
+Enter the following information:  
+
 
 |  |  |
 | ------ | ----------- |
-| **Transit VPC Name** | gcp-transit |
+| **Transit VPC Name** | gcp-transit~-~aviatrix-lab-pod-[pod#]|
 | **Connection Name** | MyOnPrem |
 | **Aviatrix Transit Gateway BGP ASN** | 650[pod#] _For Pods 1-9, pad the pod# with an additional 0 (ie. 65004)_ |
 | **Algorithms** | Leave unchecked to select default values |
 | **BGP Remote AS Number** | 65000 |
-| **Remote Gateway** | <ip-address> _Please resolve the FQDN onprem-cne-gw.aviatrixlab.com_ |
+| **Remote Gateway** | <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_ |
 | **Pre-shared Key** | mapleleafs |
 | **Local Tunnel IP** | 169.254.[pod#].2/30 |
 | **Remote Tunnel IP** | 169.254.[pod#].1/30 |
+
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="700">
+
 
 After 1-2 minutes, under the Site2Cloud menu option, you should see that the connection to On-Prem is green.  In order to test connectivity between cloud and on-prem, a test VM is available with the FQDN onprem-cne-priv.aviatrixlab.com.
 
