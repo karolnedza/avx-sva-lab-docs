@@ -262,10 +262,17 @@ After enabling Connected Transit, the spoke to spoke communication tests should 
 ## Lab 2.6 - Set Up the Multi-Cloud Transit Peering
 ### Description
 Now that we have built the AWS environment, let’s connect it to the Azure and GCP environment.
-### Validate
-Have a look at **_Multi-Cloud Transit -> Transit Peering_**. As you can see, the _Azure_ and _GCP_ gateways are already peered together. You have validated this connectivity to work already in exercise 1.3.  
 
-Create a new transit peering on this page, by clicking add new. Select the _AWS_ and the _Azure_ gateway (_azure-transit_) and click OK. Wait for the connection to establish.  
+### Task
+
+Have a look at **_Multi-Cloud Transit -> Transit Peering_**. As you can see, the _Azure_ and _GCP_ gateways are already peered together. You have validated this connectivity to work already in exercise 1.3. 
+
+We can create a new transit peering on this page, by clicking but let's use Terraform. Create two transit peering:
+* AWS and the Azure gateway (azure-transit)
+* AWS and the GCP gateway (gcp-transit)
+
+[Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway_peering)
+
 
 * Try to ping the server in Azure and GCP from one of the AWS instances
 ```
