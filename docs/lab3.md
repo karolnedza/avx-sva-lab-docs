@@ -52,6 +52,8 @@ Save the file and run ```terraform apply``` Enter ```yes```
 ### Expected Results
 The 4 security domains should now be created.
 
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domains_apply.png" width="700">
+
 
 ## Lab 3.3 - Create Connection Policies
 ### Description
