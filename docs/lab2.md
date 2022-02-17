@@ -271,7 +271,11 @@ We can create a new transit peering on this page, by clicking but let's use Terr
 * AWS and the Azure gateway (azure-transit)
 * AWS and the GCP gateway (gcp-transit)
 
+You are going to use the same ```~/lab2/main.tf``` to configure transit peering. Do not delete previous configuration!
+
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway_peering)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_peering.png" width="700">
 
 
 * Try to ping the server in Azure and GCP from one of the AWS instances
