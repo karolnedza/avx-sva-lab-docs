@@ -277,6 +277,8 @@ You are going to use the same ```~/lab2/main.tf``` to configure transit peering.
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_peering.png" width="700">
 
+Save the file and run ```terraform apply``` Enter ```yes``` 
+
 
 * Try to ping the server in Azure and GCP from one of the AWS instances
 ```
@@ -329,8 +331,9 @@ Enter the following information:
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="700">
 
+Save the file and run ```terraform apply``` Enter ```yes``` 
 
-After 1-2 minutes, under the Site2Cloud menu option, you should see that the connection to On-Prem is green.  In order to test connectivity between cloud and on-prem, a test VM is available with the FQDN onprem-cne-priv.aviatrixlab.com.
+After 1-2 minutes, under the ```Site2Cloud ``` menu option, you should see that the connection to On-Prem is green.  In order to test connectivity between cloud and on-prem, a test VM is available with the FQDN onprem-cne-priv.aviatrixlab.com.
 
 * Connect into _GCP-SRV1_
 * Run the following commands:
