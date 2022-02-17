@@ -319,10 +319,10 @@ Enter the following information:
 | **connection_type** | bgp |
 | **bgp_local_as_num** | 650[pod#] _For Pods 1-9, pad the pod# with an additional 0 (ie. 65004)_ |
 | **bgp_remote_as_num** | 65000 |
-<!-- | **remote_gateway_ip** | <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_ |
+| **remote_gateway_ip** | <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_ |
 | **pre_shared_key** | mapleleafs |
 | **local_tunnel_cidr** | 169.254.[pod#].2/30 |
-| **remote_tunnel_cidr** | 169.254.[pod#].1/30 | -->
+| **remote_tunnel_cidr** | 169.254.[pod#].1/30 |
 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="700">
