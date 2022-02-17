@@ -310,20 +310,19 @@ Now let’s add the On-Premise Datacenter connection.  You are going to use the 
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_external_device_conn)
 
-Enter the following information:  
-
-
+Enter the following information: 
 |  |  |
 | ------ | ----------- |
-| **Transit VPC Name** | gcp-transit~-~aviatrix-lab-pod-[pod#]|
-| **Connection Name** | MyOnPrem |
-| **Aviatrix Transit Gateway BGP ASN** | 650[pod#] _For Pods 1-9, pad the pod# with an additional 0 (ie. 65004)_ |
-| **Algorithms** | Leave unchecked to select default values |
-| **BGP Remote AS Number** | 65000 |
-| **Remote Gateway** | <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_ |
-| **Pre-shared Key** | mapleleafs |
-| **Local Tunnel IP** | 169.254.[pod#].2/30 |
-| **Remote Tunnel IP** | 169.254.[pod#].1/30 |
+| **vpc_id** | gcp-transit~-~aviatrix-lab-pod-[pod#]|
+| **connection_name** | MyOnPrem |
+| **gw_name** | gcp-transit |
+| **connection_type** | bgp |
+| **bgp_local_as_num** | 650[pod#] _For Pods 1-9, pad the pod# with an additional 0 (ie. 65004)_ |
+| **bgp_remote_as_num** | 65000 |
+| **remote_gateway_ip** | <ip-address> _Please resolve the FQDN onprem-cne-gw.sva.aviatrixlab.de_ |
+| **pre_shared_key** | mapleleafs |
+| **local_tunnel_cidr** | 169.254.[pod#].2/30 |
+| **remote_tunnel_cidr** | 169.254.[pod#].1/30 |
 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="700">
