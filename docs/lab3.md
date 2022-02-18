@@ -146,14 +146,12 @@ First, we are going to deploy two standalone gateways in two VPCs which will do 
 |       GW Name |          Size |  Region       |    VPC ID     | Public Subnet CIDR | Single IP Snat |
 | ------------- | ------------- | ------------- | ------------- | ------------------ | ----------- |
 | psf-01   | t3.small      | eu-central-1  |   same as aws-spoke-1       |    same as aws-spoke-1      |  true    |
-| psf-01   | t3.small      | eu-central-1  |   same as aws-spoke-2       |    same as aws-spoke-1      |  true    |
+| psf-02   | t3.small      | eu-central-1  |   same as aws-spoke-2       |    same as aws-spoke-1      |  true    |
 
-
-All egress traffic for the subnets that are attached to the selected route tables is now being routed through the filtering gateway. The controller took care of adjusting the routing for us.
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_gws.dpng" width="700">
 
 Let’s create a new tag for FQDN filtering. A tag is list of domains that are allowed or denied. We can create multiple tags and we can attach multiple tags to gateways.
 
-Go to the **_Security -> Egress Control_** page. Go to step 3 and click **_New Tag_**. Create the following tags: _Spoke1_, _Spoke2_ and _All Spokes_.
 
 We are going to create these tags and add the following domains. **Make sure to hit save and update before you click close!**  
 
