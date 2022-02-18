@@ -138,16 +138,16 @@ FQDN Egress filtering is supported in multiple clouds, but we are going to confi
 ![Egress Diagram](images/egress-diagram.png)  
 _Fig. Egress Diagram_  
 
-### Validate
-First, we are going to deploy a Public Filtering Subnet and a gateway which will do the actual FQDN egress filtering. Go to the **_Security -> Public Subnet_** page. Click **_Add New_**. Create the gateway according to the settings shown below. In order to select all routing tables, you can use shift or control.  
+### Task
+First, we are going to deploy two standalone gateways in two VPCs which will do the actual FQDN egress filtering. 
 
-![Egress Gateway Spoke1](images/egress-gw1.png)  
-_Fig. Egress Gateway Spoke1_  
+[Terraform Aviatrix Gateway](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_gateway)
 
-We need to create another gateway for our second AWS spoke. Create it with the below settings.
+|       GW Name |          Size |  Region       |    VPC ID     | Public Subnet CIDR | Single IP Snat |
+| ------------- | ------------- | ------------- | ------------- | ------------------ | ----------- |
+| psf-01   | t3.small      | eu-central-1  |   same as aws-spoke-1       |    same as aws-spoke-1      |  true    |
+| psf-01   | t3.small      | eu-central-1  |   same as aws-spoke-2       |    same as aws-spoke-1      |  true    |
 
-![Egress Gateway Spoke2](images/egress-gw2.png)  
-_Fig. Egress Gateway Spoke2_  
 
 All egress traffic for the subnets that are attached to the selected route tables is now being routed through the filtering gateway. The controller took care of adjusting the routing for us.
 
