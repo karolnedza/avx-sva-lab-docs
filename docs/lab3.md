@@ -148,7 +148,7 @@ First, we are going to deploy two standalone gateways in two VPCs which will do 
 | psf-01   | t3.small      | eu-central-1  |   same as aws-spoke-1       |    same as aws-spoke-1      |  true    |
 | psf-02   | t3.small      | eu-central-1  |   same as aws-spoke-2       |    same as aws-spoke-1      |  true    |
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_gws.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_gws.png" width="750">
 
 Let’s create a new tag for FQDN filtering. A tag is list of domains that are allowed or denied. We can create multiple tags and we can attach multiple tags to gateways.
 
