@@ -78,7 +78,7 @@ The above connection policies should now be created.
 ### Description
 Now we will add each of the Spokes and On-Prem connection to the security domains.
 ### Task
-Open ```~/lab2/main.tf``  and create the following associations:
+Open ```~/lab2/main.tf```  and create the following associations:
 
 | Transit Gateway Name | Attachment Name | Security Domain Name |
 | ------ | ----------- | ---------- |
@@ -89,10 +89,14 @@ Open ```~/lab2/main.tf``  and create the following associations:
 | azure-transit   | azure-spoke1 | Blue |
 | gcp-transit   | MyOnPrem | Onprem |
 		
+[Terraform Security Domain and Transit Gateway Attachment Associations](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain_association)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domain_associations.png" width="720">
+
 
 
 ### Expected Results
-Once you have done this, have a look at the Security Domain overview in CoPilot. You will find it by clicking **_Security_** in the menu. This should help you clearly understand the Security Domains and the Connection Policies.
+Once you have done this, have a look at the Security Domain overview in ```CoPilot```. You will find it by clicking **_Security_** in the menu. This should help you clearly understand the Security Domains and the Connection Policies.
 
 ## Lab 3.5 - Connectivity Tests
 ### Description
