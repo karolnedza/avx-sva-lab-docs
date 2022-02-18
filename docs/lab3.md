@@ -160,10 +160,10 @@ Save the file and run ```terraform apply``` Enter ```yes```
 Let’s create a new tag for FQDN filtering. We can create multiple tags and we can attach multiple tags to gateways.
 
 
-Open ```~/lab2/main.tf``` and Create three FQDN tags
+Open ```~/lab2/main.tf```  create three FQDN tags and attach to the specific FQDN gatways
 
 
-[Terraform Aviatrix Gateway FQDN filter](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_fqdn)
+[Terraform Aviatrix Gateway FQDN tags](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_fqdn)
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_tags.png" width="800">
 
