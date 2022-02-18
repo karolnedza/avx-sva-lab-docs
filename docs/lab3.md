@@ -184,22 +184,12 @@ Open ```~/lab2/main.tf```  create three FQDN rules and attach to the specific FQ
 | spoke2   | www.ubuntu.com | ICMP / Empty | Base Policy |
 
 
+Open ```~/lab2/main.tf```  create three FQDN rules and attach to the specific FQDN tags
 
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_rules.png" width="800">
 
+Save the file and run ```terraform apply``` Enter ```yes```  
 
-
-Next, we need to enable the tags:
-
-![Enable Egress Tags](images/enable-egress-tags.png)  
-_Fig. Enable Egress Tags_  
-
-These tags are not yet assigned to our gateways, so they are not yet filtering any traffic. Click **_Attach Gateway_**, and attach the tags as follows:
-
-| Tag | Gateways |
-| ------ | ----------- |
-| All Spokes   | psf-01, psf-02 |
-| Spoke1   | psf-01 |
-| Spoke2   | psf-02 |
 
 * Connect into AWS-SRV1 (If you are having trouble connecting, disable the tags, try to connect again and then re-enable the tags)
 * Run the following commands:
