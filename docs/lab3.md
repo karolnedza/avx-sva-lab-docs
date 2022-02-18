@@ -170,16 +170,23 @@ Open ```~/lab2/main.tf```  create three FQDN tags and attach to the specific FQD
 Save the file and run ```terraform apply``` Enter ```yes```  
 
 
-We are going to create these tags and add the following domains. **Make sure to hit save and update before you click close!**  
+We have FQDN Gateways and FQDN tags. The only missing part are FQDN rules.
+
+Open ```~/lab2/main.tf```  create three FQDN rules and attach to the specific FQDN tags
+
+[Terraform Aviatrix FQDN rules](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_fqdn_tag_rule)
+
 
 | Tag | Domain | Protocol & Port | Action |
 | ------ | ----------- | ---------- | ---------- |
-| All Spokes   | www.github.com | ICMP / Empty | Base Policy |
-| Spoke1   | www.microsoft.com | ICMP / Empty | Base Policy |
-| Spoke2   | www.ubuntu.com | ICMP / Empty | Base Policy |
+| all spokes   | www.github.com | ICMP / Empty | Base Policy |
+| spoke1   | www.microsoft.com | ICMP / Empty | Base Policy |
+| spoke2   | www.ubuntu.com | ICMP / Empty | Base Policy |
 
-![Egress Tags](images/egress-tags.png)  
-_Fig. Egress Tag Config_  
+
+
+
+
 
 Next, we need to enable the tags:
 
