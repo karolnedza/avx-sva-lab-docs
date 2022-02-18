@@ -37,7 +37,7 @@ Each spoke VPC / VNET contains a Linux VM to test connectivity.  The purpose of 
 ### Validate
 In order execute the connectivity tests, we need to log on to the test instances we have deployed throughout the lab. We use a web based SSH tool for this. Browse to:  
 
-**URL:** ```https://web.pod[x].aviatrixlab.de```  
+**URL:** ```https://web.pod[x].sva.aviatrixlab.de```  
 **User:** ```admin```  
 **Password:** ```Password123```  
 
