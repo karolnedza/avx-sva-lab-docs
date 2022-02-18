@@ -91,7 +91,7 @@ Open ```~/lab2/main.tf```  and create the following associations:
 		
 [Terraform Security Domain and Transit Gateway Attachment Associations](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain_association)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domain_associations.png" width="720">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domain_associations.png" width="820">
 
 
 
