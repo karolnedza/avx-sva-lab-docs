@@ -93,6 +93,7 @@ Open ```~/lab2/main.tf```  and create the following associations:
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domain_associations.png" width="820">
 
+Save the file and run ```terraform apply``` Enter ```yes```  
 
 
 ### Expected Results
@@ -141,6 +142,9 @@ _Fig. Egress Diagram_
 ### Task
 First, we are going to deploy two standalone gateways in two VPCs which will do the actual FQDN egress filtering. 
 
+Open ```~/lab2/main.tf``` and Create the two gateways : _psf-01_, _psf-02_
+
+
 [Terraform Aviatrix Gateway](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_gateway)
 
 |       GW Name |          Size |  Region       |    VPC ID     | Public Subnet CIDR | Single IP Snat |
@@ -150,7 +154,20 @@ First, we are going to deploy two standalone gateways in two VPCs which will do 
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_gws.png" width="800">
 
-Let’s create a new tag for FQDN filtering. A tag is list of domains that are allowed or denied. We can create multiple tags and we can attach multiple tags to gateways.
+Save the file and run ```terraform apply``` Enter ```yes```  
+
+
+Let’s create a new tag for FQDN filtering. We can create multiple tags and we can attach multiple tags to gateways.
+
+
+Open ```~/lab2/main.tf``` and Create three FQDN tags
+
+
+[Terraform Aviatrix Gateway FQDN filter](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_fqdn)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_tags.png" width="800">
+
+Save the file and run ```terraform apply``` Enter ```yes```  
 
 
 We are going to create these tags and add the following domains. **Make sure to hit save and update before you click close!**  
