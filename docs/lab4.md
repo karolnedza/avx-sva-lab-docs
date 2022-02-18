@@ -7,12 +7,13 @@ The focus of this lab will be on using all of the visibility provided by the Avi
 
 ## Lab 4.1 - Packet Capture
 ### Description
-While operating a cloud environment, there are times where following and capturing packets is necessary.  The Aviatrix Controller allows you to centrally perform and generate packet captures from the Aviatrix Gateways.
+While operating a cloud environment, there are times where following and capturing packets is necessary.  CoPilot allows you to centrally perform and generate packet captures from any of the Aviatrix Gateways.
 ### Validate
-To start a packet capture, navigate to **_Troubleshoot -> Diagnostics -> Network -> Packet Capture_**.  Select one of the Aviatrix Gateways, the interface (eth0), optionally filter on host and/or port, and click _Start_.  Captured packets will be displayed live - click _Stop_ when finished, download the PCAP and open it in Wireshark.
+To start a packet capture, open CoPilot, and go to **_Topology_**.  Open up the Node (ie. VPC or VNET) that you want to trace packets on, by doubleclicking on the corresponding blue node.  Now click on the orange Aviatrix GW icon and click on the **_Diag_** button on the right side of the screen.  Now scroll a little to the right in the menu, click on the **_Packet Capture_** tab, and filter on the appropriate IP and/or Ports and click **_Start_**.  
 
 ![Packet Capture](images/packet-capture.png)  
 _Fig. Packet Capture_  
+
 ### Expected Results
 You should be able to view live captured packets in the UI.  By downloading the PCAP and opening the file in Wireshark, you will see more detailed packet information.
 
@@ -93,4 +94,4 @@ Login to CoPilot and navigate to **_FlowIQ_**.  In the **Overview** tab, let's c
 Find any flow that goes across your cloud network.  In this example we are looking at all pings across the cloud network over the last 24 hours, but you can create much more complex filters.
 
 ![FlowIQ](images/flowiq.png)  
-_Fig. FlowIQ_ 
+_Fig. FlowIQ_  
