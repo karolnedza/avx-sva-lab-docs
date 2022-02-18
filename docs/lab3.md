@@ -12,7 +12,7 @@ Until now we have set up a relatively flat any to any network.  Now let's see ho
 
 Your Junior collegue deployed two Transit Gateways from UI and now you need to go to Controller UI **_Multi-Cloud Transit -> Segmentation_**. and enable segmentation for  2 transit gateways: Azure and GCP. 
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation.png" width="800">
 
 Select the gateway and click enable. **Make sure to do this only for GCP and Azure transit gateways**.
 
@@ -20,14 +20,14 @@ We can use terraform to enable segmentation on AWS Transit GW we created earlier
 
  ```enable_segmentation = true```
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_segmentation.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_segmentation.png" width="800">
 
 
 Save the file and run ```terraform apply``` Enter ```yes```  
 
 Terraform should modify Transit GW attribute enable_segmentation
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tgw_segmentation_apply.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tgw_segmentation_apply.png" width="800">
 
 
 ### Expected Results
@@ -44,7 +44,7 @@ Open ```~/lab2/main.tf``` and Create the following security domains: _Red_, _Blu
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation_domains.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation_domains.png" width="800">
 
 Save the file and run ```terraform apply``` Enter ```yes```  
 
@@ -52,7 +52,7 @@ Save the file and run ```terraform apply``` Enter ```yes```
 ### Expected Results
 The 4 security domains should now be created.
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domains_apply.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_domains_apply.png" width="800">
 
 
 ## Lab 3.3 - Create Connection Policies
@@ -63,7 +63,7 @@ Open ```~/lab2/main.tf``` and modify the _Shared_ security domain so it is conne
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain_connection_policy)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation_policy.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/segmentation_policy.png" width="800">
 
 Save the file and run ```terraform apply``` Enter ```yes```  
 
@@ -71,7 +71,7 @@ Save the file and run ```terraform apply``` Enter ```yes```
 ### Expected Results
 The above connection policies should now be created.
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_policy_apply.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/seg_policy_apply.png" width="800">
 
 
 ## Lab 3.4 - Add VPC’s/VNET’s/S2C to Security Domains

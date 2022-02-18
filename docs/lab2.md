@@ -24,7 +24,7 @@ Let's deploy our first VPC using terraform. Go to YourFolder/sva-terraform/lab2/
 
 Use your favourite text editor to Open file  ```providers.tf``` and configure Aviatrix Terraform provider
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/providers.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/providers.png" width="800">
 
 
 Save the file and run ```terraform init``` Did it work? 
@@ -33,7 +33,7 @@ Terraform configurations must declare which providers they require, so that Terr
 
 Open file  ```versions.tf``` and configure Aviatrix Terraform provider 
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/versions.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/versions.png" width="800">
 
 [Terraform Required Providers](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs)
 
@@ -43,13 +43,13 @@ Open file  ```main.tf``` and configure Transit VPC
 
 For the VPC CIDR, replace “x” with your pod number. For example, if your pod number is 11. “x” should be replaced with 11, so the complete CIDR will become 10.11.40.0/23. Make sure Aviatrix Transit VPC is set to True. The aviatrix_vpc resource will automatically create all the required public and private subnets, AWS IGW and routing tables.  
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_vpc.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_vpc.png" width="800">
 
 [Terraform Aviatrix VPC Documentation](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc)
 
 Save the file and run ```terraform apply``` Enter ```yes```
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_apply_vpc.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/tf_apply_vpc.png" width="800">
 
 Terraform deployed VPC but what actually was deployed and how we can use it?  You can check if by running ```terraform console``` (```terraform.tfstate``` must be in the same folder)
 
@@ -60,13 +60,13 @@ Start ```terraform console``` and run:
 - ```aviatrix_vpc.aws_vpc.public_subnets[0].cidr ```
 
 ###### All Public Subnets
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/public_subnets.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/public_subnets.png" width="800">
 
 ###### First Public Subnet
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet.png" width="800">
 
 ###### First Public Subnet CIDR - we will need it later!
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet_cidr.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/first_public_subnet_cidr.png" width="800">
 
 
 #### Bonus:
@@ -75,7 +75,7 @@ By default, ```aviatrix_vpc```  will use the assigned CIDR to add a private and 
 
 [Terraform Aviatrix VPC Documentation](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#advanced-options)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_adv.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/vpc_adv.png" width="800">
 
 
 ### Expected Results
@@ -101,21 +101,21 @@ Aviatri Transit Gateway requirments:
 - Active-Mesh: enabled
 - Size: t3.small
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw.png" width="800">
 
 
 Save the file and run ```terraform apply``` Enter ```yes```  Please read then ingore warning "Deprecated Attribute"
 
 This will take a few minutes, have a coffee.  
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_apply.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_apply.png" width="800">
 
   
 We are not deploying an HA solution in this workshop, but by adding just two linese we can deploy a second gateway and cluster them in an HA pair.  
 
 [Terraform Aviatrix Transit GW Doc](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_ha.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_ha.png" width="800">
 
 
 ### Expected Results
@@ -136,18 +136,18 @@ This is typical brown-field scenario with existing VPC. To create the spoke gate
 
 Go to Useful Tools -> Create a VPC. As you can see, there are our Spoke VPCs  and we see their VPC-ids. Copy both, you will need them.
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_vpc_id.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_vpc_id.png" width="800">
 
 To get Public Subnet CIDR, select VPC and click on ```DETAILS```  Copy first public Subnet CIDR for each VPC (aws-spoke1 and aws-spoke2)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_subnets.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_subnets.png" width="800">
 
 
 ```Useful Tools -> Create a VPC``` shows only VPC created by Controller. There is one more VPC created from Cloud Console. 
 
 Go to ```Useful Tools -> VPC Tracker``` and look for ```aws-shared``` to get VPC-Id and VPC Address Space
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/shared_vpc.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/shared_vpc.png" width="800">
 
 Cloud Ops team told you that you can use only second or third avaialable subnets /28 in VPC  ```aws-shared``` /24 address space. 
 Deploy ```Aviatrix Spoke GW``` in one of them
@@ -167,13 +167,13 @@ You are going to use the same ```~/lab2/main.tf``` to configure all Spoke Gatewa
 
 [Terraform Aviatrix Spoke GW Doc](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_gateway)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw.png" width="800">
 
 Save the ```~/lab2/main.tf``` file and run ```terraform apply``` Enter ```yes```
 
 Three Spoke GWs should be deployed in a few minutes
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw_apply.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw_apply.png" width="800">
 
 
 ### Expected Results
@@ -203,7 +203,7 @@ If you don't know what values can be refferenced use terraform documentation
 
 [Terraform Aviatrix Transit GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway#gw_name)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_attachments.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_attachments.png" width="800">
 
 
 ### Expected Results
@@ -236,12 +236,12 @@ By default, routes are not propagated between spokes attached to the same transi
 
 You need to enable Connected Transit. To do this modify Transit GW configuration by adding   ```connected_transit = true```
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit.png" width="800">
 
 
 Save the file and run ```terraform apply``` Enter ```yes```  Terraform should modify Transit GW attribute connected_transit
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit_apply.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/connected_transit_apply.png" width="800">
 
 
 * Connect into AWS-SRV1
@@ -275,7 +275,7 @@ You are going to use the same ```~/lab2/main.tf``` to configure transit peering.
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway_peering)
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_peering.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_peering.png" width="800">
 
 Save the file and run ```terraform apply``` Enter ```yes``` 
 
@@ -329,7 +329,7 @@ Enter the following information:
 |  **remote_tunnel_cidr**  |  169.254.[pod#].1/30  |
 
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="700">
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/s2c_onprem.png" width="800">
 
 Save the file and run ```terraform apply``` Enter ```yes``` 
 
