@@ -14,7 +14,7 @@ Navigate and login to the Aviatrix Controller.
 ### Validate
 Open your browser and navigate to:
 
-**URL:** ```https://ctrl.pod[x].aviatrixlab.de```  
+**URL:** ```https://ctrl.pod[x].sva.aviatrixlab.de```  
 **User:** ```admin```  
 **Password:** ```Password123!```
 
@@ -47,10 +47,10 @@ In order execute the connectivity tests, we need to log on to the test instances
 1- Connect into **GCP-SRV1** from the *ALL CONNECTIONS* pane. (Tip: use right-click open in new tab)  
 2- Run the following commands:
 ```
-ping azure-srv1-priv.pod[x].aviatrixlab.de 
-ping aws-srv1-priv.pod[x].aviatrixlab.de 
-ping aws-srv2-priv.pod[x].aviatrixlab.de  
-ping shared-priv.pod[x].aviatrixlab.de
+ping azure-srv1-priv.pod[x].sva.aviatrixlab.de 
+ping aws-srv1-priv.pod[x].sva.aviatrixlab.de 
+ping aws-srv2-priv.pod[x].sva.aviatrixlab.de  
+ping shared-priv.pod[x].sva.aviatrixlab.de
 ```  
 ### Expected Results
 Not all of the ping tests will be successful.  Look at the Diagram in the Lab 1 Overview and you will see that only Azure and GCP are connected so far, but AWS is not connected, therefore the connectivity tests from GCP to AWS will not work.

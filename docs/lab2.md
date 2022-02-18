@@ -225,8 +225,8 @@ To test the connectivity, we will SSH using the public FQDN of one of our Linux 
 * Connect into AWS-SRV1
 * Run the following commands:
 ```
-ping aws-srv2-priv.pod[x].aviatrixlab.com
-ping shared-priv.pod[x].aviatrixlab.com
+ping aws-srv2-priv.pod[x].sva.aviatrixlab.de
+ping shared-priv.pod[x].sva.aviatrixlab.de
 ```
 > Were you able to ping aws-srv2-priv and shared-priv?
 
@@ -247,12 +247,12 @@ Save the file and run ```terraform apply``` Enter ```yes```  Terraform should mo
 * Connect into AWS-SRV1
 * Run the following commands:
 ```
-ping aws-srv2-priv.pod[x].aviatrixlab.com
-ping shared-priv.pod[x].aviatrixlab.com
+ping aws-srv2-priv.pod[x].sva.aviatrixlab.de
+ping shared-priv.pod[x].sva.aviatrixlab.de
 ```
 * Trace the hops between Spoke1 and Spoke2 in AWS
 ```
-mtr aws-srv2-priv.pod[x].aviatrixlab.com
+mtr aws-srv2-priv.pod[x].sva.aviatrixlab.de
 ```
 > Were you able to ping aws-srv2-priv and shared-priv?
 
@@ -282,8 +282,8 @@ Save the file and run ```terraform apply``` Enter ```yes```
 
 * Try to ping the server in Azure and GCP from one of the AWS instances
 ```
-ping gcp-srv1-priv.pod[x].aviatrixlab.com
-ping azure-srv1-priv.pod[x].aviatrixlab.com
+ping gcp-srv1-priv.pod[x].sva.aviatrixlab.de
+ping azure-srv1-priv.pod[x].sva.aviatrixlab.de
 ```
 
 ### Expected Results
@@ -333,12 +333,12 @@ Enter the following information:
 
 Save the file and run ```terraform apply``` Enter ```yes``` 
 
-After 1-2 minutes, under the ```Site2Cloud ``` menu option, you should see that the connection to On-Prem is green.  In order to test connectivity between cloud and on-prem, a test VM is available with the FQDN onprem-cne-priv.aviatrixlab.com.
+After 1-2 minutes, under the ```Site2Cloud ``` menu option, you should see that the connection to On-Prem is green.  In order to test connectivity between cloud and on-prem, a test VM is available with the FQDN onprem-cne-priv.sva.aviatrixlab.de.
 
 * Connect into _GCP-SRV1_
 * Run the following commands:
 ```
-ping onprem-cne-priv.aviatrixlab.com
+ping onprem-cne-priv.sva.aviatrixlab.de
 ```
 > Was the ping successful?
 
@@ -351,14 +351,14 @@ Select the appropriate Routes to approve (_10.254.0.0/20_), click _Approve_ and 
 * Connect into _AWS-SRV1_
 * Run the following commands:
 ```
-ping onprem-cne-priv.aviatrixlab.com
-mtr onprem-cne-priv.aviatrixlab.com
+ping onprem-cne-priv.sva.aviatrixlab.de
+mtr onprem-cne-priv.sva.aviatrixlab.de
 ```
 * Connect into _GCP-SRV1_
 * Run the following commands:
 ```
-ping onprem-cne-priv.aviatrixlab.com
-mtr onprem-cne-priv.aviatrixlab.com
+ping onprem-cne-priv.sva.aviatrixlab.de
+mtr onprem-cne-priv.sva.aviatrixlab.de
 ```
 > Was the ping successful?
 

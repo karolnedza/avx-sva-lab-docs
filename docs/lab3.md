@@ -105,11 +105,11 @@ Now that we have created our segmentation and connection policies, let’s test 
 * Connect into AWS-SRV1
 * Run the following commands:
 ```
-ping aws-srv2-priv.pod[x].aviatrixlab.com
-ping azure-srv1-priv.pod[x].aviatrixlab.com
-ping gcp-srv1-priv.pod[x].aviatrixlab.com
-ping shared-priv.pod[x].aviatrixlab.com
-ping onprem-cne-priv.aviatrixlab.com
+ping aws-srv2-priv.pod[x].sva.aviatrixlab.de
+ping azure-srv1-priv.pod[x].sva.aviatrixlab.de
+ping gcp-srv1-priv.pod[x].sva.aviatrixlab.de
+ping shared-priv.pod[x].sva.aviatrixlab.de
+ping onprem-cne-priv.sva.aviatrixlab.de
 ```
 
 > Can you explain why some ping’s were successful and others weren’t?
@@ -117,11 +117,11 @@ ping onprem-cne-priv.aviatrixlab.com
 * Connect into AWS-SRV2
 * Run the following commands:
 ```
-ping aws-srv1-priv.pod[x].aviatrixlab.com
-ping azure-srv1-priv.pod[x].aviatrixlab.com
-ping gcp-srv1-priv.pod[x].aviatrixlab.com
-ping shared-priv.pod[x].aviatrixlab.com
-ping onprem-cne-priv.aviatrixlab.com
+ping aws-srv1-priv.pod[x].sva.aviatrixlab.de
+ping azure-srv1-priv.pod[x].sva.aviatrixlab.de
+ping gcp-srv1-priv.pod[x].sva.aviatrixlab.de
+ping shared-priv.pod[x].sva.aviatrixlab.de
+ping onprem-cne-priv.sva.aviatrixlab.de
 ```
 
 > Can you explain why some ping’s were successful and others weren’t?
