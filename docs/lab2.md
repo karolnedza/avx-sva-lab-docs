@@ -361,6 +361,20 @@ mtr onprem-cne-priv.sva.aviatrixlab.de
 ```
 > Was the ping successful?
 
+### Bonus 
+One of your customers wants to establish IPSEC tunnel to your AVX Transit. They asked what is your Transit Gateway IP.
+
+Open ```/sva-code/outputs.tf``` and configure output value which returns  AVX Transit GW Public IP.
+
+[Terraform Aviatrix Transit GW Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway#gw_name)
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_eip.png" width="800">
+
+Save the file and run ```terraform apply``` Enter ```yes```  
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/transit_gw_eip_apply.png" width="800">
+
+
 ### Expected Results
 After adding the connection to on-prem and approving the learned routes, the connectivity tests should be successful.  Our lab environment now looks like this:  
 ![Toplogy](images/topology7.png)  
