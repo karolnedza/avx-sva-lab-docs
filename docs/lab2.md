@@ -1,7 +1,6 @@
 # Lab 2
 
 ## Create VPCs/VNets and deploy Aviatrix gateways?
-Lab time: ~60 minutes
 
 In this lab, we will begin to build out the multi-cloud network.  We will create:
 - VPCs 
@@ -20,7 +19,7 @@ Go to **_Useful Tools -> Create a VPC_**. As you can see, there already are mult
 
 ### Task
 
-Let's deploy our first VPC using terraform. Go to YourFolder/sva-terraform/lab2/
+Let's deploy our first VPC using terraform. Go to ```/sva-terraform-master/sva-code/```
 
 Use your favourite text editor to Open file  ```providers.tf``` and configure Aviatrix Terraform provider
 
@@ -90,7 +89,7 @@ Check out the CoPilot Topology View.  Do you see the newly created Transit VPC?
 In this exercise we are going to launch the Aviatrix transit gateway in the newly created Transit VPC in AWS. 
 
 ### Task
-Deploy AVX Transit Gateway in the VPC that we just created. You are going to use the same ```~/lab2/main.tf``` file to configure Aviatrix Transit GW.
+Deploy AVX Transit Gateway in the VPC that we just created. You are going to use the same ```/sva-code/main.tf``` file to configure Aviatrix Transit GW.
 Use ```aviatrix_vpc``` resource reference whenever it is possible.  If you don't know what values can be refferenced use terraform documentation or ```terraform console```
 
 [Terraform Aviatrix VPC Refferences](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_vpc#attribute-reference)
@@ -163,13 +162,13 @@ We have all details to deploy three spokes in VPCs:
 | aws-shared   | aws-shared   | t3.small      | eu-central-1  |   xxxxx       |    x.x.x.x/28      |   true     |
 
 
-You are going to use the same ```~/lab2/main.tf``` to configure all Spoke Gateways. Do not delete previous configuration!
+You are going to use the same ```/sva-code/main.tf``` to configure all Spoke Gateways. Do not delete previous configuration!
 
 [Terraform Aviatrix Spoke GW Doc](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_gateway)
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/spoke_gw.png" width="800">
 
-Save the ```~/lab2/main.tf``` file and run ```terraform apply``` Enter ```yes```
+Save the ```/sva-code/main.tf``` file and run ```terraform apply``` Enter ```yes```
 
 Three Spoke GWs should be deployed in a few minutes
 
@@ -190,7 +189,7 @@ _Fig. Copilot Topology_
 We now have all of our gateways deployed. Next we need to set up connectivity between the spoke gateways and the transit gateway.
 
 ### Task
-Attach three Spoke Gateways to Transit GW. You are going to use the same ```~/lab2/main.tf``` to configure spoke attachments. 
+Attach three Spoke Gateways to Transit GW. You are going to use the same ```/sva-code/main.tf``` to configure spoke attachments. 
 Do not delete previous configuration!
 
 [Terraform Aviatrix Spoke-to-Transit gateway attachments](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_spoke_transit_attachment)
@@ -271,7 +270,7 @@ We can create a new transit peering on this page, by clicking but let's use Terr
 * AWS and the Azure gateway (azure-transit)
 * AWS and the GCP gateway (gcp-transit)
 
-You are going to use the same ```~/lab2/main.tf``` to configure transit peering. Do not delete previous configuration!
+You are going to use the same ```/sva-code/main.tf``` to configure transit peering. Do not delete previous configuration!
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_gateway_peering)
 
@@ -309,7 +308,7 @@ Before adding On-Prem to our Multi-Cloud environment, let’s enable ```Route Ap
 
 To enable Route Approval, navigate to **_Multi-Cloud Transit -> Approval -> Select gcp-transit_** and switch the knob from **Disabled** to **Enabled**.  
 
-Now let’s add the On-Premise Datacenter connection.  Open ```~/lab2/main.tf``` to configure the connection. Do not delete previous configuration!
+Now let’s add the On-Premise Datacenter connection.  Open ```/sva-code/main.tf``` to configure the connection. Do not delete previous configuration!
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_transit_external_device_conn)
 
@@ -317,7 +316,7 @@ Enter the following information:
 
 |   Attribute   |   Value        |
 | ------------------ | ----------------- |
-|  **vpc_id**    |   gcp-transit ~ - ~ aviatrix-lab-pod-[pod#]    |
+|  **vpc_id**    |   gcp-transit  -  aviatrix-lab-pod-[pod#]    |
 |  **connection_name**  |  MyOnPrem  |
 |  **gw_name**  |  gcp-transit  |
 |  **connection_type**  |  bgp  |

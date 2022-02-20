@@ -1,7 +1,6 @@
 # Lab 3  
 
 ## Security Features
-Lab time: ~45 minutes  
 
 In this lab, we are going to explore some of the security features that Aviatrix provides. Currently we have open and unlimited communication between all VPC’s and VNET’s and Site2Cloud connection. We rely on security groups/NSG’s to secure the workloads. But what if we need more deliberate segmentation? Aviatrix provides the concept of Security Domains. Let’s see how these work and what they can do for us.
 
@@ -40,7 +39,7 @@ Now we are going to create some security domains, which we can use for segmentat
 ### Task
 Create the following security domains: _Red_, _Blue_, _Shared_ and _Onprem_.
 
-Open ```~/lab2/main.tf``` and Create the following security domains: _Red_, _Blue_, _Shared_ and _Onprem_.
+Open ```/sva-code/main.tf``` and Create the following security domains: _Red_, _Blue_, _Shared_ and _Onprem_.
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain)
 
@@ -59,7 +58,7 @@ The 4 security domains should now be created.
 ### Description
 In order to specify allowed Security Domain to Security Domain communication, we need to set up some Connection Policies.
 ### Task
-Open ```~/lab2/main.tf``` and modify the _Shared_ security domain so it is connected to _Red_ and _Blue_. Also connect security domain _Onprem_ to _Red_.  
+Open ```/sva-code/main.tf``` and modify the _Shared_ security domain so it is connected to _Red_ and _Blue_. Also connect security domain _Onprem_ to _Red_.  
 
 [Terraform Aviatrix Transit GW Peering](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_segmentation_security_domain_connection_policy)
 
@@ -78,7 +77,7 @@ The above connection policies should now be created.
 ### Description
 Now we will add each of the Spokes and On-Prem connection to the security domains.
 ### Task
-Open ```~/lab2/main.tf```  and create the following associations:
+Open ```/sva-code/main.tf```  and create the following associations:
 
 | Transit Gateway Name | Attachment Name | Security Domain Name |
 | ------ | ----------- | ---------- |
@@ -142,7 +141,7 @@ _Fig. Egress Diagram_
 ### Task
 First, we are going to deploy two standalone gateways in two VPCs which will do the actual FQDN egress filtering. 
 
-Open ```~/lab2/main.tf``` and Create the two gateways : _psf-01_, _psf-02_
+Open ```/sva-code/main.tf``` and Create the two gateways : _psf-01_, _psf-02_
 
 
 [Terraform Aviatrix Gateway](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_gateway)
@@ -160,7 +159,7 @@ Save the file and run ```terraform apply``` Enter ```yes```
 Let’s create a new tag for FQDN filtering. We can create multiple tags and we can attach multiple tags to gateways.
 
 
-Open ```~/lab2/main.tf```  create three FQDN tags and attach to the specific FQDN gatways
+Open ```/sva-code/main.tf```  create three FQDN tags and attach to the specific FQDN gatways
 
 
 [Terraform Aviatrix Gateway FQDN tags](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_fqdn)
@@ -172,7 +171,7 @@ Save the file and run ```terraform apply``` Enter ```yes```
 
 We have FQDN Gateways and FQDN tags. The only missing part are FQDN rules.
 
-Open ```~/lab2/main.tf```  create three FQDN rules and attach to the specific FQDN tags
+Open ```/sva-code/main.tf```  create three FQDN rules and attach to the specific FQDN tags
 
 [Terraform Aviatrix FQDN rules](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_fqdn_tag_rule)
 
@@ -184,7 +183,7 @@ Open ```~/lab2/main.tf```  create three FQDN rules and attach to the specific FQ
 | spoke2   | www.ubuntu.com | ICMP / Empty | Base Policy |
 
 
-Open ```~/lab2/main.tf```  create three FQDN rules and attach to the specific FQDN tags
+Open ```/sva-code/main.tf```  create three FQDN rules and attach to the specific FQDN tags
 
 <img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_rules.png" width="800">
 
