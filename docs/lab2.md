@@ -19,7 +19,7 @@ Go to **_Useful Tools -> Create a VPC_**. As you can see, there already are mult
 
 ### Task
 
-Let's deploy our first VPC using terraform. Go to ```/sva-code/```
+Let's deploy our first VPC using terraform. Go to ```/sva-code/``` folder
 
 Use your favourite text editor to Open file  ```providers.tf``` and configure Aviatrix Terraform provider
 
