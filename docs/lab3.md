@@ -139,22 +139,19 @@ FQDN Egress filtering is supported in multiple clouds, but we are going to confi
 _Fig. Egress Diagram_  
 
 ### Task
-First, we are going to deploy two standalone gateways in two VPCs which will do the actual FQDN egress filtering. 
-
-Open ```/sva-code/main.tf``` and Create the two gateways : _psf-01_, _psf-02_
 
 
-[Terraform Aviatrix Gateway](https://registry.terraform.io/providers/AviatrixSystems/aviatrix/latest/docs/resources/aviatrix_gateway)
+First, we are going to deploy a Public Filtering Subnet and a gateway which will do the actual FQDN egress filtering. 
 
-|       GW Name |          Size |  Region       |    VPC ID     | Public Subnet CIDR | Single IP Snat |
-| ------------- | ------------- | ------------- | ------------- | ------------------ | ----------- |
-| psf-01   | t3.small      | eu-central-1  |   same as aws-spoke-1       |    same as aws-spoke-1      |  true    |
-| psf-02   | t3.small      | eu-central-1  |   same as aws-spoke-2       |    same as aws-spoke-1      |  true    |
+**Please create the egress gateways via the UI, since the spoke VPC are not described in terraform**
 
-<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/fqdn_gws.png" width="800">
+Go to the **_Security -> Public Subnet_** page. Click **_Add New_**. Create the gateway according to the settings shown below. In order to select all routing tables, you can use shift or control.  
 
-Save the file and run ```terraform apply``` Enter ```yes```  
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/egress-gw1.png" width="800">
 
+We need to create another gateway for our second AWS spoke. Create it with the below settings.
+
+<img src="https://raw.githubusercontent.com/karolnedza/avx-sva-lab-docs/master/docs/images/egress-gw2.png" width="800">
 
 Let’s create a new tag for FQDN filtering. We can create multiple tags and we can attach multiple tags to gateways.
 
